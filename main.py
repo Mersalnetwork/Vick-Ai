@@ -13,7 +13,12 @@ STRING = os.environ.get("STRING", None)
 MONGO_URL = os.environ.get("MONGO_URL", None)
 
 
-bot = Client(STRING, API_ID, API_HASH)
+bot = Client(
+    "Chatbot" ,
+    api_id = API_ID,
+    api_hash = API_HASH ,
+    bot_token = BOT_TOKEN
+)
 
 
 async def is_admins(chat_id: int):
